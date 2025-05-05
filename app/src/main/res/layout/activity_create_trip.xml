@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".CreateTripActivity">
+
+    <TextView
+        android:id="@+id/titleCreateTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a Trip"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+    <!-- Back Arrow -->
+    <TextView
+        android:id="@+id/backArrowText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="\u2190"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/titleCreateTrip"/>
+
+    <EditText
+        android:id="@+id/tripName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint=" Enter Trip Name"
+        android:layout_marginHorizontal="25dp"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintTop_toBottomOf="@id/titleCreateTrip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <EditText
+        android:id="@+id/tripDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="DD/MM/YYYY"
+        android:padding="12dp"
+        android:layout_marginHorizontal="25dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintTop_toBottomOf="@id/tripName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+
+    <!-- Start Point Field -->
+    <EditText
+        android:id="@+id/startPoint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Start Point"
+        android:layout_marginHorizontal="25dp"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintTop_toBottomOf="@id/tripDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- End Point Field -->
+    <EditText
+        android:id="@+id/endPoint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter End Point"
+        android:layout_marginHorizontal="25dp"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintTop_toBottomOf="@id/startPoint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Select Filters Button -->
+    <Button
+        android:id="@+id/selectFiltersButton"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="30dp"
+        android:text="Select Filters"
+        android:backgroundTint="@android:color/holo_green_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/endPoint" />
+
+
+    <!-- Save Trip Button -->
+    <Button
+        android:id="@+id/saveTripButton"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:text="Save Trip"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/selectFiltersButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="120dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

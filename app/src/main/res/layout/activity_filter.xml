@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <!-- Top Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:weightSum="3"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/backArrowText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="←"
+                android:textSize="32sp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Filters"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/resetText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/teal_700"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <!-- LEVELS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LEVELS"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/black" />
+
+        <Switch
+            android:id="@+id/switch_level1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Level 1" />
+
+        <Switch
+            android:id="@+id/switch_level2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Level 2" />
+
+        <Switch
+            android:id="@+id/switch_level3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Level 3 (DCFC)" />
+
+        <!-- CONNECTORS SECTION -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONNECTORS"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="24dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Row 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="8dp">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/connector_bg">
+
+                <ImageView
+                    android:id="@+id/type1_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_type1"
+                    android:scaleType="centerInside"
+                    android:padding="12dp" />
+
+                <ImageView
+                    android:id="@+id/type1_tick"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="6dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_check"
+                    android:tint="@android:color/holo_green_dark" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/connector_bg">
+
+                <ImageView
+                    android:id="@+id/type2_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_type2"
+                    android:scaleType="centerInside"
+                    android:padding="12dp" />
+
+                <ImageView
+                    android:id="@+id/type2_tick"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="6dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_check"
+                    android:tint="@android:color/holo_green_dark" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="8dp">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/connector_bg">
+
+                <ImageView
+                    android:id="@+id/ccs_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_css_png"
+                    android:scaleType="centerInside"
+                    android:padding="12dp" />
+
+                <ImageView
+                    android:id="@+id/ccs_tick"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="6dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_check"
+                    android:tint="@android:color/holo_green_dark" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/connector_bg">
+
+                <ImageView
+                    android:id="@+id/chademo_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_chademo"
+                    android:scaleType="centerInside"
+                    android:padding="12dp" />
+
+                <ImageView
+                    android:id="@+id/chademo_tick"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="6dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_check"
+                    android:tint="@android:color/holo_green_dark" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- NETWORKS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NETWORKS"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="24dp"
+            android:textColor="@android:color/black" />
+
+        <Switch
+            android:id="@+id/tesla_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tesla" />
+
+        <Switch
+            android:id="@+id/chargepoint_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ChargePoint" />
+
+        <Switch
+            android:id="@+id/evgo_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EVgo" />
+
+        <Switch
+            android:id="@+id/electrify_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Electrify America" />
+
+        <Switch
+            android:id="@+id/select_all_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select All" />
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/button_apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apply"
+            android:layout_marginTop="16dp"
+            android:textSize="16dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textSize="16dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>

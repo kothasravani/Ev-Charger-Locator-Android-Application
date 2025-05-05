@@ -1,0 +1,135 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".HomePageActivity2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/nav_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/nav"
+            android:contentDescription="Open Navigation Drawer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"/>
+
+        <SearchView
+            android:id="@+id/mapSearch"
+            android:layout_width="340dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/white"
+            android:iconifiedByDefault="false"
+            android:padding="8dp"
+            android:queryHint="search"
+            app:layout_constraintStart_toEndOf="@+id/nav_icon"
+            app:layout_constraintTop_toTopOf="@+id/map" />
+        <!-- FILTER STATUS CONTAINER (centered below search bar) -->
+        <LinearLayout
+            android:id="@+id/filterStatusContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_filter_status"
+            android:visibility="gone"
+            android:elevation="2dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/mapSearch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_filter_applied"
+                android:contentDescription="Filter Icon"
+                android:tint="@color/teal_700" />
+
+            <TextView
+                android:id="@+id/filterStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="Filters are currently applied"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Recenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapSearch"
+            app:srcCompat="@android:drawable/ic_menu_mylocation" />
+
+        <FrameLayout
+            android:id="@+id/filterButtonContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/fab_center"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/filterbutton"
+                android:layout_width="46dp"
+                android:layout_height="34dp"
+                android:src="@drawable/filter"
+                android:background="@android:color/transparent"
+                android:contentDescription="Filter" />
+
+            <View
+                android:id="@+id/filterDot"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/green_dot_background"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header_layout"/>
+</androidx.drawerlayout.widget.DrawerLayout>

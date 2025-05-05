@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="@android:color/white">
+
+    <!-- Username -->
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="User Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/unreadBadge"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"/>
+
+    <!-- ✅ Last Message Preview -->
+    <TextView
+        android:id="@+id/lastMessagePreview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Last message here..."
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="@id/usernameText"
+        app:layout_constraintTop_toBottomOf="@id/usernameText"
+        app:layout_constraintEnd_toStartOf="@id/unreadBadge"
+        android:layout_marginTop="2dp"/>
+
+    <!-- User Online/Last Seen Status -->
+    <TextView
+        android:id="@+id/userStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Online"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@id/usernameText"
+        app:layout_constraintTop_toBottomOf="@id/lastMessagePreview"
+        android:layout_marginTop="2dp"/>
+
+    <!-- Unread Message Badge -->
+    <TextView
+        android:id="@+id/unreadBadge"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/unread_badge_background"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:text="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

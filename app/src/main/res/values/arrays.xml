@@ -1,0 +1,24 @@
+<resources>
+    <string-array name="levels_array">
+        <item>None</item>
+        <item>Level 1</item>
+        <item>Level 2</item>
+        <item>DC Fast</item>
+    </string-array>
+
+    <string-array name="connectors_array">
+        <item>None</item>
+        <item>Type 1</item>
+        <item>Type 2</item>
+        <item>CCS</item>
+        <item>CHAdeMO</item>
+    </string-array>
+
+    <string-array name="networks_array">
+        <item>None</item>
+        <item>Tesla</item>
+        <item>ChargePoint</item>
+        <item>EVgo</item>
+        <item>Electrify America</item>
+    </string-array>
+</resources>
